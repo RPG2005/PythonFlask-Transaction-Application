@@ -12,6 +12,9 @@ transactions = [
 ]
 
 # Read operation
+@app.route('/')
+def index():
+    return render_template('transactions.html', transactions=transactions)
 
 # Create operation
 

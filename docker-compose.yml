@@ -1,0 +1,14 @@
+version: '3.8'
+name: coursera
+services:
+  flask-app:
+    build: .
+    container_name: flask-transactions-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+    command: python app.py
